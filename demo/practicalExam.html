@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scheduling Algorithm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Process Table</h2>
+    <table id="processTable">
+      <thead>
+        <tr>
+          <th>Process ID</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <div class="controls">
+      <h2 class="algo-name">FCFS</h2>
+      <label for="arrivalTime">Arrival Time</label>
+      <input type="text" id="arrivalTime">
+      <label for="burstTime">Burst Time</label>
+      <input type="text" id="burstTime">
+      <label for="quantum">Quantum</label>
+      <input type="text" id="quantum">
+      <div class="butt">
+        <button onclick="addProcess()">Add Process</button>
+        <button onclick="runAlgorithm()">Run Algorithm</button>
+      </div>
+    </div>
+
+    <h2>Gantt Chart</h2>
+    <div class="gantt" id="ganttChart">
+      <!-- bars will be added dynamically -->
+    </div>
+
+    <div class="footer">
+      <div>Average Waiting Time: <strong id="avgWaiting">-</strong></div>
+      <div>Average Turnaround Time: <strong id="avgTurnaround">-</strong></div>
+      <div>Total Execution Time: <strong id="totalExec">-</strong></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
